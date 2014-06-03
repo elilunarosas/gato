@@ -1,0 +1,148 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>JUEGO DEL GATO</title>
+<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="funcion1.js" type="text/javascript"></script>
+<script src="funcion2.js" type="text/javascript"></script>
+<script src="funcion3.js" type="text/javascript"></script>
+<script src="funcion4.js" type="text/javascript"></script>
+<script src="funcion5.js" type="text/javascript"></script>
+<script src="funcion6.js" type="text/javascript"></script>
+<script src="funcion7.js" type="text/javascript"></script>
+<script src="funcion8.js" type="text/javascript"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>JUEGO DEL GATO</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+            <li><a href="#reglas">REGLAS DEL JUEGO</a></li>
+			<li><a href="#gato">INICIAR PARTIDA</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>SUERTE</h4>
+	</div>
+</div>
+
+<div data-role="page" id="reglas">
+	<div data-role="header">
+         <a data-role="button" data-rel="back" data-direction="reverse">ATRAS</a>
+		<h1>REGLAS DEL JUEGO</h1>
+	</div>
+    <div data-role="panel" id="mipanel" align="center">
+    <h4><font color="#FF0000">1.- Decide quién va primero. </font></h4>
+    <p>Es lógico establecer quién irá primero o segundo, es por eso que este artículo estará divido en dos partes para poder mencionar todas las posibilidades de este juego.</p>
+    <h4><font color="#FF0000">2.- Empieza el juego. </font></h4>
+    <p>Si eres el primer jugador, tienes dos opciones. Puedes colocar tu marca (X / O) en el "centro" o una de las "esquinas". Los otros cuadrados son denominados bordes y no constituyen una buena opción.</p>
+    <h4><font color="#FF0000">3.- Repetir los pasos 1 y 2 hasta terminar el juego.</font></h4>
+    <p>La marca ganadora será la que reuna 3 marcas en horizontal, vertical o diagonal, como se muestra en las figuras</p>
+</div>
+<div data-role="content" align="center">
+    <p>POSIBLES FORMAS DE GANAR</p>
+    <p>
+    <img src="g1.png" width="99" height="100">
+    <img src="g2.png" width="99" height="100">
+    <img src="g3.png" width="99" height="100">
+    <img src="g4.png" width="99" height="100">
+    <img src="g5.png" width="99" height="100">
+    <img src="g6.png" width="99" height="100">
+    <img src="g7.png" width="99" height="100">
+    <img src="g8.png" width="99" height="100">
+    </p>
+    <a href="#mipanel">CONOCE LAS REGLAS</a>
+</div> 
+	
+	<div data-role="footer">
+		<h4>SUERTE</h4>
+	</div>
+</div>
+
+<div data-role="page" id="gato">
+<div data-role="header">
+         <a data-role="button" data-rel="back" data-direction="reverse">ATRAS</a>
+		<h1>JUEGO DEL GATO</h1>
+	</div>
+	<div data-role="content">
+<div align="center">
+    <form name="marcador">
+        <table width="200" border="10" bordercolor="#FFFFFF" bgcolor="#FF9900" align="center" cellpadding="3" cellspacing="3">
+        <tr>
+        <td>
+        <font color="white">EMPATES:</font><br><input type=text name=tablas value=0 size=1 readonly style="background:#FF9900; border:0px solid gold;color:white;">
+       </td>
+       <td>
+       <font color="white">PERDIDAS:</font><br><input type=text name=perdidas value=0 size=1 readonly style="background:#FF9900; border:0px solid gold;color:white;font-weight:bold;">
+       </td>
+       <td>
+       <font color="white">GANADAS:</font><br><input type=text name=ganadas value=0 size=1  readonly style="background:#FF9900; border:0px solid gold;color:white;font-weight:bold;">
+       </td>
+       </tr>
+       <tr>
+       <td colspan=3>
+       <div align="center">
+       <input type=reset value="BORRAR">
+       </div>
+       </td>
+       </tr>
+  </form>
+  </div>
+     <div align="center">
+     <form name="tablero">
+     <tr >
+     <td>
+      <input type="text"  name="t1" value="" size=1   onfocus="PonerAspa(tablero,0)" readonly style="background:#ff9900; border:0px solid gold;color:white;font-weight:bold;">
+     </td>
+     <td>
+      <input type="text" name="t2" value="" size=1  onfocus="PonerAspa(tablero,1)" readonly style="background:#ff9900; border:0px solid gold;color:white;font-weight:bold;">
+     </td>
+      <td>
+      <input type="text" name="t3" value="" size=1  onfocus="PonerAspa(tablero,2)" readonly style="background:#ff9900; border:0px solid gold;color:white;font-weight:bold;">
+     </td>
+    </tr>
+    <tr >
+     <td>
+      <input type="text" name="t4" value="" size=1  onfocus="PonerAspa(tablero,3)" readonly style="background:#ff9900; border:0px solid gold;color:white;font-weight:bold;">
+     </td>
+     <td>
+      <input type="text" name="t5" value="" size=1  onfocus="PonerAspa(tablero,4)" readonly style="background:#ff9900; border:0px solid gold;color:white;font-weight:bold;">
+     </td>
+     <td>
+      <input type="text" name="t6" value="" size=1  onfocus="PonerAspa(tablero,5)" readonly style="background:#ff9900; border:0px solid gold;color:white;font-weight:bold;">
+     </td>
+    </tr>
+    <tr >
+     <td>
+      <input type="text"  name="t7" value="" size=1  onfocus="PonerAspa(tablero,6)" readonly style="background:#ff9900; border:0px solid gold;color:white;font-weight:bold;">
+     </td>
+     <td>
+      <input type="text"  name="t8" value="" size=1  onfocus="PonerAspa(tablero,7)" readonly style="background:#ff9900; border:0px solid gold;color:white;font-weight:bold;">
+     </td>
+     <td>
+      <input type="text"  name="t9" value="" size=1  onfocus="PonerAspa(tablero,8)" readonly style="background:#ff9900; border:0px solid gold;color:white;font-weight:bold;">
+     </td>
+     </tr>
+     <tr>
+     <td colspan="3">
+     <div align="center">
+      <input type="reset" value="INICIAR JUEGO" name=Juego onClick="jugando=true">
+     </div>
+     </td>
+     </tr>
+   </form>
+    </table>
+        </div>
+	</div>
+	<div data-role="footer">
+		<h4>A GANAR</h4>
+	</div>
+</div>
+</body>
+</html>
